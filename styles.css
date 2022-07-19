@@ -1,0 +1,282 @@
+*{
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#container{
+    width: 90%;
+    height: auto;
+    margin: 0px auto;
+    border: 1px solid rgba(225, 225, 226, 0.8);
+    box-shadow: 0px 0px 10px #ccc;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    min-height: 530px;
+
+}
+
+#header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 120px;
+    border-bottom:1px solid rgba(225, 225, 226, 0.8);
+
+}
+.logo{
+    flex-grow: 1;
+    flex-basis: 65%;
+    font-family: Helvetica;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 35px;
+
+
+    padding: 10px;
+    margin-left: 20px;
+    color: black;
+    text-shadow: 1px 1px 0px #ccc;
+    text-transform: uppercase;
+    
+}
+.logo h1{
+    font-family: Helvetica;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 35px;
+}
+
+#menu{
+    flex-grow: 1;
+    flex-basis: 30%;
+    height: 100%;
+}
+
+#menu > ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    list-style: none;
+    margin-right: 4px;
+
+}
+
+#menu a{
+    text-transform: uppercase;
+    color: #444;
+    padding: 15px;
+    transition: all 300ms;
+    margin-right: 4px;
+    font-size: 13px;
+}
+
+#menu a:hover{
+    background: #ccc;
+    color: white;
+}
+
+#content{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#projects{
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-between;
+    flex-basis: 80%;
+
+}
+
+.project{
+    flex-basis: 250px;
+    flex-grow: 1;
+    margin-bottom: 25px;
+    margin-right: 4px;
+    border: 1px solid #ccc;
+    width: 250px;
+
+}
+.project img{
+    width: 100%;
+}
+
+.project-info{
+    padding: 10px;
+}
+.project-info a {
+    font-size: 16px;
+    color: black;
+    transition: all 300ms;
+
+}
+.project-info a:hover{
+    color: green;
+}
+
+.project-info p {
+    font-size: 16px;
+    color: gray;
+    transition: all 300ms;
+
+}
+
+#aside{
+    flex-basis: 15%;
+    margin-right: 30px;
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#aside h2{
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 100;
+    color: #444;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom:1px solid rgba(225, 225, 226, 0.8);
+    text-align: center;
+
+}
+
+#aside ul{
+    list-style: none;
+}
+
+#aside ul li{
+    padding-bottom: 20px;
+}
+
+#aside a{
+    text-align: center;
+    display: block;
+    padding: 20px;
+    background: #eee;
+    text-transform: uppercase;
+    color: #444;
+    transition: all 300ms;
+
+}
+
+#aside a:hover{
+    background: #444;
+    color: #eee;
+
+
+}
+
+#footer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    height: 120px;
+    align-items: center;
+    border-top:1px solid rgba(225, 225, 226, 0.8);
+}
+
+#footer .logo{
+    order: 2;
+    opacity: 0.5;
+    flex-basis: auto;
+    flex-grow: 1;
+    text-align: right;
+    margin-right: 20px;
+
+}
+
+#footer .info{
+    margin-left: 20px;
+    order: 1;
+    flex-grow: 1;
+    color: #444;
+}
+
+@media (max-width: 888px){
+
+    #header{
+        margin-top: 20px;
+        text-align: center;
+    }
+    #menu > ul{
+
+        align-items: flex-start;
+        justify-content: space-evenly;
+   
+    
+    }
+
+    #content{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+}
+
+@media (max-width: 526px){
+    #content{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    #aside{
+        margin: 0px;
+    }
+    
+#aside ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin-left: 5px;
+    margin-right: 5px;
+    list-style: none;
+}
+
+
+    
+    #footer .logo{
+        flex-grow: 1px;
+        order: 1;
+        flex-basis: 100%;
+        text-align: center;
+        margin: 0px;
+
+    }
+
+    #footer .info{
+        margin-left: 20px;
+        order: 2;
+        flex-grow: 1;
+        color: #444;
+        flex-basis: 100%;
+        text-align: center;
+        margin: 0px;
+    }
+
+    .project{
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    
+}
